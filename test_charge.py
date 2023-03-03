@@ -19,8 +19,8 @@ def make_form(value):
     return f.content_type, f.to_string()
 
 
-f_cats_ct, f_cats = make_form('Maël')
-f_dogs_ct, f_dogs = make_form('Florian')
+f_cats_ct, f_cats = make_form('Jenkins')
+f_dogs_ct, f_dogs = make_form('Azure DevOps')
 f_reset_ct, f_reset = make_form('Reset')
 
 quit = threading.Event()
