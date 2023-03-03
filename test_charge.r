@@ -1,5 +1,5 @@
 #!usr/bien/env Rscript
-charge_r = read.csv("/home/***/total.csv")
+charge_r = read.csv("/var/lib/jenkins/workspace/docker-vote@2/Brief8-celia/total.csv")
 colnames(charge_r) = c("Temps", "Instance")
 install.packages("data.table")
 install.packages("ggplot2")
