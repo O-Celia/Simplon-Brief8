@@ -129,6 +129,8 @@ Ajout de credentials :
 
 Création d’un enregistrement DNS pointant vers l’adresse IP de l’application sur Gandi : http://vote.simplon-celia.space
 
+![](https://i.imgur.com/eXNRs5q.png)
+
 ## Chapitre 5 : Pipeline
 
 ```code
