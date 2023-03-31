@@ -44,7 +44,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 ```
-Mise à jour : ATTENTION TAILLE +2vCPU
+Mise à jour : ATTENTION TAILLE VM + 2vCPU pour que Jenkins fonctionne
 ```consol
 sudo apt-get update
 sudo apt-get install jenkins
@@ -123,7 +123,6 @@ Installation de plugins :
 *pipeline, workspace cleanup, github, docker, docker pipeline*
 
 Ajout de credentials : 
-- kube config pour le cluster
 - docker pour docker hub
 
 ## Chapitre 4 : Création de DNS pour chaque environnement
