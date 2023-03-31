@@ -44,7 +44,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 ```
-Mise à jour
+Mise à jour : ATTENTION TAILLE +2vCPU
 ```consol
 sudo apt-get update
 sudo apt-get install jenkins
@@ -68,10 +68,13 @@ curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/b
 echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
-Test de connexion et merge au cluster
+Test de connexion et merge au cluster en tant que client jenkins
 ```consol
 kubectl version --client
+sudo -iu jenkins
+az login
 az aks get-credentials --resource-group B8Celia --name AKSCluster
+exit
 ```
 
 Installation de git
@@ -87,9 +90,6 @@ sudo apt update
 sudo apt install jq
 jq --version
 ```
-
-Installation de ag
-```sudo apt install silversearcher-ag```
 
 Installation de Docker : https://docs.docker.com/engine/install/debian/
 
@@ -120,7 +120,7 @@ Installation de parallel
 ## Chapitre 3 : Configuration de Jenkins
 
 Installation de plugins : 
-*kubernetes, kubernetes cli, kubernetes credentials, pipeline, workspace cleanup, github, docker, docker pipeline*
+*pipeline, workspace cleanup, github, docker, docker pipeline*
 
 Ajout de credentials : 
 - kube config pour le cluster
@@ -168,14 +168,12 @@ pipeline {
         }
         stage('Change tag yaml and launch vote site') {
             steps {
-                withKubeConfig([credentialsId: 'kube-config']) {
                     sh('''
-                    git clone https://github.com/Simplon-CeliaOuedraogo/Brief8.git app
+                    git clone https://github.com/Simplon-CeliaOuedraogo/brief7-yaml.git app
                     TAG=\044(curl -sSf https://registry.hub.docker.com/v2/repositories/celiaoued/vote-app/tags |jq '."results"[0]["name"]'| tr -d '"')
                     sed -i "s/TAG/\044{TAG}/" ./app/vote.yaml
                     kubectl apply -f ./app
                     ''')
-                }
             }
         }
         stage('Test de charge') {
