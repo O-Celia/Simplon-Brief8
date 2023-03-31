@@ -127,8 +127,7 @@ Ajout de credentials :
 
 ## Chapitre 4 : Création de DNS pour chaque environnement
 
-Création d’un enregistrement DNS pointant vers l’adresse IP de l’application sur Gandi : 
-Environnement QAL : http://vote.simplon-celia.space
+Création d’un enregistrement DNS pointant vers l’adresse IP de l’application sur Gandi : http://vote.simplon-celia.space
 
 ## Chapitre 5 : Pipeline
 
