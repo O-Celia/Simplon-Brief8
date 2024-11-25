@@ -8,6 +8,8 @@ products:
 description: "This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster."
 ---
 
+# Automatisation du déploiement d’une application (avec cluster AKS, DNS, base de données, autoscaler et stockage persistant) avec une pipeline Jenkins et les outils Terraform, Kubernetes, et AzCli
+
 # Azure Voting App
 
 This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster. The application interface has been built using Python / Flask. The data component is using Redis.
