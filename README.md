@@ -8,7 +8,7 @@ products:
 description: "This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster."
 ---
 
-# Automatisation de la mise à jour d’une application sur Docker (avec cluster AKS, DNS, base de données, autoscaler et stockage persistant) avec une pipeline Jenkins et les outils Terraform, Kubernetes, et AzCli
+# Automatisation de la mise à jour d’une application sur Docker avec une pipeline Jenkins
 
 # Azure Voting App
 
