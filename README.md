@@ -32,11 +32,11 @@ L’objectif principal est de mettre en place une infrastructure scalable et aut
 
 ### 2. Technologies Utilisées
 
-*Cloud* : Microsoft Azure (AKS, Azure CLI)
-*Orchestrateur* : Kubernetes
-*CI/CD* : Jenkins
-*Conteneurs* : Docker
-*Langages* : Python (Flask), Bash
+*Cloud* : Microsoft Azure (AKS, Azure CLI) <br/>
+*Orchestrateur* : Kubernetes <br/>
+*CI/CD* : Jenkins <br/>
+*Conteneurs* : Docker <br/>
+*Langages* : Python (Flask), Bash<br/>
 *Outils complémentaires* :
 - kubectl pour interagir avec Kubernetes.
 - git pour la gestion du code source.
